@@ -11,4 +11,4 @@ COSAS POR MEJORAR:
 Agregar un validador para texto no permitido.
 
 DESARROLLADOR POR:
-Anthony Coronel
+AFCM
