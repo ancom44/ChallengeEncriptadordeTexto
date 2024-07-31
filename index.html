@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/styles.css">
+</head>
+<body onload="posicionarCursor()">
+    <dialog class="modal__error">
+        <div class="contenedor__modal">
+            <h2 class="aviso__modal">
+            </h2>
+            <p class="mensaje__modal"></p>
+            <button  onclick=mostrarModal(false)   class="boton__modal__cerrar">Cerrar</button>
+        </div>
+        
+    </dialog>
+    <header class="header">
+        <nav class="header__menu">
+            <img src="./assets/Logo.png">
+        </nav>
+    </header>
+    <main class="contenido">
+        <section class="contenido__ingreso">
+            <textarea class="texto__ingreso" id="texto__ingreso" type="text" placeholder="Ingrese el texto aquí" ></textarea>
+            <div class="texto__alerta">
+                <img class="imagen__alerta" src="./assets/alarma.png">
+                
+                <p class="parrafo__alerta">Solo letras minúsculas y sin acentos</p>
+                
+            </div>
+            
+            <div class="contenedor__botones">
+                <button class="boton__encriptar" id="boton__encriptar">Encriptar</button>
+                <button class="boton__desencriptar">Desencriptar</button>
+            </div>
+        </section >
+        <section class="contenido__salida">
+            <div class="contenido__final" id="contenido__final">
+                <img class="imagen__busqueda" src="./assets/Muñeco.png" >
+                <h1 class="mensaje__busqueda">Ningun mensaje fue encontrado</h1>
+                <p class="mensaje__indicacion">Ingrese el texto en la zona indicada</p>
+
+            </div>
+            <div class="contenedor__boton__copiar__oculto">
+                <button class="boton__copiar" onclick=copiarEnPortapapeles()>Copiar</button>
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="app.js" defer></script>
+</body>
+</html>
