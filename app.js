@@ -40,11 +40,11 @@ function codificarTexto(){
                 textoEncriptado=textoEncriptado+textoDividido[i];
             }
         }
-        removerContenido(".contenido__final");
+        //removerContenido(".contenido__final");
         //Agregar el texto encriptado a la salida
-        agregarTextoSalida('textarea','texto__salida','.contenido__final',textoEncriptado);
+        agregarTextoSalida('.texto__salida',textoEncriptado);
         textoEncriptado='';
-        setearAtributo('.contenedor__boton__copiar__oculto', 'contenedor__boton__copiar');
+        setearAtributo('contenedor__boton__copiar', 'contenedor__boton__copiar');
     }
 }
 
@@ -71,31 +71,29 @@ function decodificarTexto(){
             }
             textoFinal=textoFinal+textoPalabraFinal+' ';
         }
-        removerContenido(".contenido__final");
-        agregarTextoSalida('textarea','texto__salida','.contenido__final',textoFinal);
-        setearAtributo('.contenedor__boton__copiar__oculto', 'contenedor__boton__copiar')
-    }
-}
-
-function removerContenido(elementoPadre){
-    let elementoHtml=document.querySelector(elementoPadre);
-    while(elementoHtml.hasChildNodes()){
-        elementoHtml.removeChild(elementoHtml.firstChild);
+        //removerContenido(".contenido__final");
+        agregarTextoSalida('.texto__salida',textoFinal);
+        setearAtributo('contenedor__boton__copiar', 'contenedor__boton__copiar')
     }
 }
 
 
-function agregarTextoSalida(tipoElemento, claseElemento,elementoPadre,contenidoElemento){
-    let elementoNuevo=document.createElement(tipoElemento);
-    elementoNuevo.setAttribute('class',claseElemento);
-    elementoNuevo.innerText='';
-    elementoNuevo.innerText=contenidoElemento;
-    document.querySelector(elementoPadre).appendChild(elementoNuevo);
+
+
+function agregarTextoSalida(textoSalida,contenidoElemento){
+    console.log('a')
+    setearAtributo('imagen__busqueda','ocultar__salida');
+    setearAtributo('mensaje__busqueda','ocultar__salida');
+    setearAtributo('mensaje__indicacion','ocultar__salida');
+    setearAtributo('texto__salida__oculto','texto__salida');
+    let elementoNuevo=document.querySelector(textoSalida);
+    elementoNuevo.value='';
+    elementoNuevo.value=contenidoElemento;
 }
 
 function setearAtributo(elementoOculto,claseElementoVisible){
-    let elementoVisible=document.querySelector(elementoOculto);
-    elementoVisible.classList.add(claseElementoVisible);
+    let elementoVisible=document.getElementById(elementoOculto);
+    elementoVisible.className=claseElementoVisible;
 }
 
 
@@ -123,6 +121,9 @@ function copiarEnPortapapeles(){
        
 
     }
-
-    
+    setearAtributo('imagen__busqueda','imagen__busqueda');
+    setearAtributo('mensaje__busqueda','mensaje__busqueda');
+    setearAtributo('mensaje__indicacion','mensaje__indicacion');
+    setearAtributo('texto__salida__oculto','texto__salida__oculto');
+    setearAtributo('contenedor__boton__copiar', 'contenedor__boton__copiar__oculto');
 }
