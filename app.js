@@ -27,7 +27,7 @@ function codificarTexto(){
     let textoIngreso=document.querySelector('.texto__ingreso').value;
     if(textoIngreso==''){
         document.querySelector('.aviso__modal').innerText='AVISO';
-        document.querySelector('.mensaje__modal').innerText='No ha texto para encriptar';
+        document.querySelector('.mensaje__modal').innerText='No ha ingresado texto para encriptar';
         mostrarModal(true);
     }
     else{
@@ -54,7 +54,7 @@ function decodificarTexto(){
     let textoIngreso=document.querySelector('.texto__ingreso').value;
     if(textoIngreso==''){
         document.querySelector('.aviso__modal').innerText='AVISO';
-        document.querySelector('.mensaje__modal').innerText='No ha texto para desencriptar';
+        document.querySelector('.mensaje__modal').innerText='No ha ingresado texto para desencriptar';
         mostrarModal(true);
     }
     else{
