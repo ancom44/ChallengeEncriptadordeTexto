@@ -38,13 +38,13 @@
         </section >
         <section class="contenido__salida">
             <div class="contenido__final" id="contenido__final">
-                <img class="imagen__busqueda" src="./assets/Muñeco.png" >
-                <h1 class="mensaje__busqueda">Ningun mensaje fue encontrado</h1>
-                <p class="mensaje__indicacion">Ingrese el texto en la zona indicada</p>
-
+                <img class="imagen__busqueda" id="imagen__busqueda" src="./assets/Muñeco.png" >
+                <h1 class="mensaje__busqueda" id="mensaje__busqueda">Ningun mensaje fue encontrado</h1>
+                <p class="mensaje__indicacion" id="mensaje__indicacion">Ingrese el texto en la zona indicada</p>
+                <textarea class="texto__salida__oculto" id="texto__salida__oculto"></textarea>
             </div>
-            <div class="contenedor__boton__copiar__oculto">
-                <button class="boton__copiar" onclick=copiarEnPortapapeles()>Copiar</button>
+            <div class="contenedor__boton__copiar__oculto" id="contenedor__boton__copiar">
+                <button class="boton__copiar" id="boton__copiar" onclick=copiarEnPortapapeles()>Copiar</button>
             </div>
             
         </section>
