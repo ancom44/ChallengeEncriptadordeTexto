@@ -145,20 +145,45 @@ body{
 }
 
 .imagen__busqueda{
+    display: flex;
     height: 45%;
     width: 80%;
 }
 
 .mensaje__busqueda{
+    display: flex;
     font-size: 1.5rem;
     text-align: center;
     width: 80%;
 }
 
 .mensaje__indicacion{
+    display: flex;
     font-size: 0.95rem;
     text-align: center;
 }
+
+.ocultar__salida{
+    display: none;
+}
+
+
+.texto__salida__oculto{
+    display: none;
+}
+
+.texto__salida{
+    display: flex;
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 1.25rem;
+    border-style: none;
+    outline: none;
+}
+
 
 .contenedor__boton__copiar__oculto{
     height: 20%;
@@ -187,16 +212,7 @@ body{
     color: var(--color-secundario);
 }
 
-.texto__salida{
-    width: 90%;
-    height: 100%;
-    border-radius: 10px;
-    background-color: transparent;
-    border-color: transparent;
-    font-size: 1.25rem;
-    border-style: none;
-    outline: none;
-}
+
 
 
 .modal__error{
